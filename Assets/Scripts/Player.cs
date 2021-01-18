@@ -38,10 +38,17 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
+        MovePlayer(horizontalMovement);
     }
     void MovePlayer(float _horizontalMouvement) {
+        Vector3 targetVelocity = new Vector2(_horizontalMouvement, rb.velocity.y);
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, 0.5f);
 
+        if(isJumping == true)
+        {
+            rb.AddForce(new Vector2(0f, jumpForce));
+            isJumping = false;
+        }
     }
     void Flip(float _velocity)
     {
