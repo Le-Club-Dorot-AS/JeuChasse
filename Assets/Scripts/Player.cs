@@ -10,9 +10,6 @@ public class Player : MonoBehaviour
     private bool isJumping;
 
     public GameObject gameOver;
-
-
-
     
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -24,7 +21,7 @@ public class Player : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
-    public int health = 3;
+    public int health;
 
     private void Start()
     {
@@ -33,7 +30,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Health>().health = health;
+        gameOver.GetComponent<Health>().health = health;
         if (health <= 0)
         {
             gameOver.SetActive(true);
