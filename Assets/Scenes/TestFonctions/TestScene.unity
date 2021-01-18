@@ -6975,6 +6975,7 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+<<<<<<< HEAD
 --- !u!1 &247806035
 GameObject:
   m_ObjectHideFlags: 0
@@ -7075,6 +7076,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+=======
+>>>>>>> parent of 41e52f2... Ennemi/WeakSpot
 --- !u!1 &383655216
 GameObject:
   m_ObjectHideFlags: 0
@@ -7174,6 +7177,7 @@ MonoBehaviour:
   player: {fileID: 1078337222}
   timeOffset: 0.2
   possOffset: {x: 0.2, y: 0.2, z: -10}
+<<<<<<< HEAD
 --- !u!1 &462796059
 GameObject:
   m_ObjectHideFlags: 0
@@ -7543,6 +7547,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959084387}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> parent of 41e52f2... Ennemi/WeakSpot
 --- !u!1 &1078337222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,7 +7562,6 @@ GameObject:
   - component: {fileID: 1078337223}
   - component: {fileID: 1078337227}
   - component: {fileID: 1078337226}
-  - component: {fileID: 1078337228}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -7690,7 +7695,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
-<<<<<<< HEAD
 --- !u!1 &1165418849
 GameObject:
   m_ObjectHideFlags: 0
@@ -7903,15 +7907,11 @@ BoxCollider2D:
   m_Size: {x: 0.16541788, y: 0.16230512}
   m_EdgeRadius: 0
 --- !u!114 &1342226005
-=======
---- !u!114 &1078337228
->>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1342226001}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7923,6 +7923,7 @@ MonoBehaviour:
   - {fileID: 1942769322}
   - {fileID: 1171312760}
   graphs: {fileID: 1342226003}
+<<<<<<< HEAD
 =======
   m_GameObject: {fileID: 1078337222}
   m_Enabled: 1
@@ -8084,6 +8085,8 @@ Canvas:
   fullHeart: {fileID: 0}
 >>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
 >>>>>>> 41e52f23f9722e7011b0a437051558995007e314
+=======
+>>>>>>> parent of 41e52f2... Ennemi/WeakSpot
 --- !u!1 &1450763028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8236,11 +8239,7 @@ Transform:
   m_Father: {fileID: 1078337225}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1786812439
-=======
---- !u!1 &2011514737
->>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8248,34 +8247,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 1786812441}
   m_Layer: 0
   m_Name: Ennemi
-=======
-  - component: {fileID: 2011514738}
-  - component: {fileID: 2011514740}
-  - component: {fileID: 2011514739}
-  m_Layer: 5
-  m_Name: Heart (2)
->>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!4 &1786812441
 Transform:
-=======
---- !u!224 &2011514738
-RectTransform:
->>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1786812439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.72, y: 0.32, z: -13.0234375}
@@ -8289,28 +8274,10 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942769321
 GameObject:
-=======
-  m_GameObject: {fileID: 2011514737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 462796060}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2011514739
-MonoBehaviour:
->>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942769322}
@@ -8323,38 +8290,10 @@ MonoBehaviour:
   m_IsActive: 1
 --- !u!4 &1942769322
 Transform:
-=======
-  m_GameObject: {fileID: 2011514737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28b79b2a7e5e7c5448d6ab7db3fdf411, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2011514740
-CanvasRenderer:
->>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1942769321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.15, z: 0}
@@ -8363,7 +8302,3 @@ CanvasRenderer:
   m_Father: {fileID: 1786812441}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
-  m_GameObject: {fileID: 2011514737}
-  m_CullTransparentMesh: 0
->>>>>>> 9307bc37af8a3d3a319983fe2a7aa0eeb4ed6e88
