@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isJumping;
 
+    public GameObject gameOver;
+
+
+
+    
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask collisionLayers;
@@ -19,10 +24,26 @@ public class Player : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
-    
+    public int health = 3;
+
+    private void Start()
+    {
+        gameObject.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {
+        gameObject.GetComponent<Health>().health = health;
+        if (health <= 0)
+        {
+            gameOver.SetActive(true);
+            Time.timeScale = 0;
+            Destroy(gameObject);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            health--;
+        }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
@@ -35,6 +56,7 @@ public class Player : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+        
     }
     void FixedUpdate()
     {
