@@ -1,0 +1,6 @@
+-> 2D ou 2.5D
+-> Platformer
+-> Recherche d'objets 
+-> Indices pour ouvrir coffres
+-> Dans le ciel ?
+->
