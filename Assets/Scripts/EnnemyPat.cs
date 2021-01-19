@@ -6,7 +6,7 @@ public class EnnemyPat : MonoBehaviour
 public float speed; // La vitesse de déplacement l'ennemie
 public Transform[] waypoints; // définit les points que l'ennemie devra rejoindre.
 public SpriteRenderer graphs;
-
+public int damageDeal = 1;
 
 private Transform target; //définit la cible où il va se déplacer
 private int destPoint = 0; // 0 réfèrera à sa position initial.
@@ -28,4 +28,12 @@ void Update() //définira les déplacements
 		graphs.flipX = !graphs.flipX;
 	}
 }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            Health playerHealth = collision.transform.GetComponent<Health>();
+            playerHealth.TakeDommage(damageDeal);
+        }
+    }
 }

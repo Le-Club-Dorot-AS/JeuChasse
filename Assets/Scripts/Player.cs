@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
     private float verticalMovement;
-
+    public int health;
 
     private void Start()
     {
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Health>().health = health;
+        health = gameObject.GetComponent<Health>().health;
         if (health <= 0)
         {
             gameOver.SetActive(true);
