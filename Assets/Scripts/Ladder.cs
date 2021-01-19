@@ -12,7 +12,8 @@ public class Ladder : MonoBehaviour
 
     void Awake()
     {
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();       
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        interactUI.enabled = false;
     }
 
     // Update is called once per frame
