@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     public Image imageInstru3;
 
     public Text TabIndice;
+    public int nbIndice;
 
     public static Inventory instance;
     private void Awake()
@@ -45,6 +46,17 @@ public class Inventory : MonoBehaviour
         {
             imageInstru3.enabled = true;
         }
+        if (Input.GetKeyDown(KeyCode.Z) && nbIndice>0)
+        {
+            if (TabIndice.enabled == true)
+            {
+                TabIndice.enabled = false;
+            }
+            else
+            {
+                TabIndice.enabled = true;
+            }
+        }
     }
     public void AddCoins(int count)
     {
@@ -72,5 +84,6 @@ public class Inventory : MonoBehaviour
     public void AddPapier(string indice)
     {
         TabIndice.text += indice+"\n";
+        nbIndice++;
     }
 }
