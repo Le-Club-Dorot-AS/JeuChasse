@@ -16,17 +16,18 @@ public class Ladder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isInRange && Input.GetKeyDown(KeyCode.E)) //entré échelle
-        {
-        	playerMovement.isClimbing = true;
-        	plateforme.isTrigger = true;
-        }
 
    	    if(isInRange && playerMovement.isClimbing && Input.GetKeyDown(KeyCode.E)) //sortie échelle
         {
         	playerMovement.isClimbing = false;
         	plateforme.isTrigger = false;
         	return;
+        }
+        
+        if(isInRange && Input.GetKeyDown(KeyCode.E)) //entrée échelle
+        {
+        	playerMovement.isClimbing = true;
+        	plateforme.isTrigger = true;
         }
     }
 

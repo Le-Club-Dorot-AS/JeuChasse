@@ -58,11 +58,11 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        MovePlayer(horizontalMovement,verticalMovement);
+        MovePlayer(horizontalMovement, verticalMovement);
     }
     void MovePlayer(float _horizontalMouvement, float _verticalMovement) 
     {
-        if (!isClimbing) //s'il ne monte pas il se déplacer normalement
+        if (!isClimbing) //s'il ne monte pas il se déplace normalement
         {
             Vector3 targetVelocity = new Vector2(_horizontalMouvement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, 0.5f);
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
             }
         } else
         {
-            Vector3 targetVelocity = new Vector2(_verticalMovement, 0);
+            Vector3 targetVelocity = new Vector2(rb.velocity.x, _verticalMovement);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, 0.5f);
         }
     }
