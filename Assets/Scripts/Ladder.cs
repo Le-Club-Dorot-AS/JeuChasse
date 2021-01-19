@@ -18,7 +18,7 @@ public class Ladder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   	    if(isInRange && playerMovement.isClimbing && Input.GetKeyDown(KeyCode.UpArrow)) //sortie échelle
+   	    if(isInRange && playerMovement.isClimbing && Input.GetKeyDown(KeyCode.E)) //sortie échelle
         {
         	playerMovement.isClimbing = false;
         	plateforme.isTrigger = false;
@@ -38,7 +38,6 @@ public class Ladder : MonoBehaviour
     	{
             interactUI.enabled = true;
             isInRange = true;
-
     	}
 
     }
