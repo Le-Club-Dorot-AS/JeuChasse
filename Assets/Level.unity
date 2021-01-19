@@ -268,6 +268,7 @@ MonoBehaviour:
   isGrounded: 0
   isJumping: 0
   isClimbing: 0
+  isBossFight: 0
   gameOver: {fileID: 883052732}
   groundCheck: {fileID: 1817457925}
   groundCheckRadius: 0.3
@@ -1247,6 +1248,7 @@ MonoBehaviour:
   haveInstru3: 0
   imageInstru3: {fileID: 0}
   TabIndice: {fileID: 0}
+  nbIndice: 0
 --- !u!4 &918975977
 Transform:
   m_ObjectHideFlags: 0
@@ -23332,7 +23334,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.0556507
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
