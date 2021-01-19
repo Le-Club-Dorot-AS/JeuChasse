@@ -6,9 +6,11 @@ public class DeathZone : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D collision)
     {
+
         if(collision.CompareTag("Player"))
         {
-            Health playerHealth = collision.transform.GetComponent<Health>();
+            Debug.Log("test");
+            Health playerHealth = collision.GetComponent<Health>();
             playerHealth.TakeDommage(3);
         }
     }
