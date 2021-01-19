@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerSpawn
   - Fondations
+  - Ennemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Interaction
   - Fondations
   - HiddenRoom
-  - 
+  - Ennemy
   - 
   - 
   - 

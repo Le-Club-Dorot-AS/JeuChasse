@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5425895697121930555}
   - component: {fileID: 5425895697121930553}
   - component: {fileID: 5425895697121930552}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: WeakSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,9 +80,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425895697483268478}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ennemi-ballon
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425895697528396108}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Waypoint3
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -146,7 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425895697594801107}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Waypoint1
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425895697733174611}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Waypoint4
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -206,7 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425895698023590276}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Waypoint2
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 5425895698570835010}
   - component: {fileID: 5425895698570835020}
   - component: {fileID: 5425895698570835021}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425895698885956367}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Waypoint5
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
