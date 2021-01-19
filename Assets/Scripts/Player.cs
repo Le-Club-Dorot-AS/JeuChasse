@@ -60,11 +60,11 @@ public class Player : MonoBehaviour
     {
         MovePlayer(horizontalMovement, verticalMovement);
     }
-    void MovePlayer(float _horizontalMouvement, float _verticalMovement) 
+    void MovePlayer(float _horizontalMovement, float _verticalMovement) 
     {
         if (!isClimbing) //s'il ne monte pas il se déplace normalement
         {
-            Vector3 targetVelocity = new Vector2(_horizontalMouvement, rb.velocity.y);
+            Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, 0.5f);
 
             if(isJumping == true)
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
             }
         } else
         {
-            Vector3 targetVelocity = new Vector2(rb.velocity.x, _verticalMovement);
+            Vector3 targetVelocity = new Vector2(0, _verticalMovement);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, 0.5f);
         }
     }
