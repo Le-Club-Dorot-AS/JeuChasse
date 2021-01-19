@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed;
+    public float climbSpeed;
     public float jumpForce;
     private bool isGrounded;
     private bool isJumping;
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.deltaTime;
 
         if (Input.GetButtonDown("Jump") && isGrounded) {
             isJumping = true;
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
             }
         } else
         {
-            Vector3 targetVelocity = new Vector2(_verticalMovement, rb.velocity.x);
+            Vector3 targetVelocity = new Vector2(_verticalMovement, 0);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, 0.5f);
         }
     }
@@ -87,7 +88,7 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
-    private void OnDrawGrizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position,groundCheckRadius);

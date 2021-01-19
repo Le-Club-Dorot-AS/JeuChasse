@@ -6,6 +6,7 @@ public class Ladder : MonoBehaviour
 {
 	private bool isInRange; //est-il à porté d'interaction avec l'objet
 	private Player playerMovement;
+	public BoxCollider2D plateforme; //surface au dessus de l'échelle
 
     void Awake()
     {
@@ -15,9 +16,17 @@ public class Ladder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isInRange && Input.GetKeyDown(KeyCode.E))
+        if(isInRange && Input.GetKeyDown(KeyCode.E)) //entré échelle
         {
         	playerMovement.isClimbing = true;
+        	plateforme.isTrigger = true;
+        }
+
+   	    if(isInRange && playerMovement.isClimbing && Input.GetKeyDown(KeyCode.E)) //sortie échelle
+        {
+        	playerMovement.isClimbing = false;
+        	plateforme.isTrigger = false;
+        	return;
         }
     }
 
@@ -26,6 +35,7 @@ public class Ladder : MonoBehaviour
     	if (collision.CompareTag("Player"))
     	{
     		isInRange = true;
+
     	}
 
     }
@@ -36,6 +46,7 @@ public class Ladder : MonoBehaviour
     	{
     		isInRange = false;
     		playerMovement.isClimbing = false;
+    		plateforme.isTrigger = false;
     	}
 
     }
