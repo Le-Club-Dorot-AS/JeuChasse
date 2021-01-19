@@ -195,7 +195,7 @@ TextureImporter:
       name: coin-spritesheet_3
       rect:
         serializedVersion: 2
-        x: 49
+        x: 48
         y: 0
         width: 16
         height: 16
@@ -216,7 +216,7 @@ TextureImporter:
       name: coin-spritesheet_4
       rect:
         serializedVersion: 2
-        x: 68
+        x: 64
         y: 0
         width: 16
         height: 16
