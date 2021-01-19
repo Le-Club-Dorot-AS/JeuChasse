@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameOver.GetComponent<Health>().health = health;
+        gameObject.GetComponent<Health>().health = health;
         if (health <= 0)
         {
             gameOver.SetActive(true);
