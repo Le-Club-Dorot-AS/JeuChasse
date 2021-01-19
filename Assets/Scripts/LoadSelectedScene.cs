@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LoadSelectedScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string SceneName;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(collision.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneName);
+        }
     }
 }
