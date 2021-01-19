@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Chest : MonoBehaviour
 {
-	private Text
+	//private Text
     void Start()
     {
         

@@ -5,11 +5,11 @@ using UnityEngine;
 public class Ladder : MonoBehaviour
 {
 	private bool isInRange; //est-il à porté d'interaction avec l'objet
-	private PlayerMovement playerMovement;
+	private Player playerMovement;
 
     void Awake()
     {
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
