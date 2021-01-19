@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public float climbSpeed;
     public float jumpForce;
-    private bool isGrounded;
-    private bool isJumping;
+    public bool isGrounded;
+    public bool isJumping;
     public bool isClimbing;
 
     public GameObject gameOver;
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+
     public SpriteRenderer spriteRenderer;
 
     private Vector3 velocity = Vector3.zero;
