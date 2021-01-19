@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public bool isGrounded;
     public bool isJumping;
     public bool isClimbing;
+    public bool isBossFight;
 
     public GameObject gameOver;
     
