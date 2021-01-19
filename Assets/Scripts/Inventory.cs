@@ -15,16 +15,36 @@ public class Inventory : MonoBehaviour
     public bool haveInstru3 = false;
     public Image imageInstru3;
 
+    public Text TabIndice;
 
     public static Inventory instance;
     private void Awake()
     {
-        if(instance != null)
+        imageInstru1.enabled = false;
+        imageInstru2.enabled = false;
+        imageInstru3.enabled = false;
+        TabIndice.enabled = false;
+        if (instance != null)
         {
             Debug.LogWarning("Il y a plus d'une instance de Inventory dans la scene");
             return;
         }
         instance = this;
+    }
+    public void Update()
+    {
+        if (haveInstru1)
+        {
+            imageInstru1.enabled = true;
+        }
+        else if (haveInstru2)
+        {
+            imageInstru2.enabled = true;
+        }
+        else if (haveInstru3)
+        {
+            imageInstru3.enabled = true;
+        }
     }
     public void AddCoins(int count)
     {
@@ -48,5 +68,9 @@ public class Inventory : MonoBehaviour
             haveInstru3 = true;
             imageInstru3.enabled = true;
         }
+    }
+    public void AddPapier(string indice)
+    {
+        TabIndice.text += indice+"\n";
     }
 }
