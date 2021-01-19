@@ -14,6 +14,7 @@ public class Snakeron : MonoBehaviour
     private bool isShooting;
     private float timeBetweenAttacks;
     public GameObject projectile;
+    public GameObject bossChest;
     public Transform firePoint;
 
     private Transform target; //définit la cible où il va se déplacer
@@ -26,7 +27,14 @@ public class Snakeron : MonoBehaviour
 
     void Update() //définira les déplacements
     {
-        if(random > 70 && isShooting)
+        if (health <= 0)
+        {
+            //SoundManager.PlaySound("DeadSound");
+            Inventory.instance.AddCoins(20);
+            Destroy(gameObject);
+            bossChest.SetActive(true);
+        }
+        if (random > 70 && isShooting)
         {
             random = 0;
             player = GameObject.FindGameObjectWithTag("Player");

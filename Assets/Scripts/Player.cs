@@ -13,7 +13,11 @@ public class Player : MonoBehaviour
     public bool isBossFight;
 
     public GameObject gameOver;
-    
+    public GameObject projectilePrefab;
+    public Transform shotPoint;
+    private float timeBtwShots;
+    public float startBtwShots;
+
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask collisionLayers;
@@ -42,7 +46,6 @@ public class Player : MonoBehaviour
             Time.timeScale = 0;
             Destroy(gameObject);
         }
-        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
@@ -53,6 +56,20 @@ public class Player : MonoBehaviour
         }
 
         Flip(rb.velocity.x);
+
+        if (timeBtwShots <= 0)
+        {
+            if (Input.GetKeyDown(KeyCode.S) && Inventory.instance.nbInstru>=1)
+            {
+                Instantiate(projectilePrefab, shotPoint.position, transform.rotation);
+                timeBtwShots = startBtwShots;
+            }
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
@@ -85,9 +102,12 @@ public class Player : MonoBehaviour
         if(_velocity > 0.1f)
         {
             spriteRenderer.flipX = false;
-        }else if(_velocity < -0.1f)
+
+        }
+        else if(_velocity < -0.1f)
         {
             spriteRenderer.flipX = true;
+
         }
     }
     private void OnDrawGizmos()

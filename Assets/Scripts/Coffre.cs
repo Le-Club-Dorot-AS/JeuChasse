@@ -24,16 +24,23 @@ public class Coffre : MonoBehaviour
     }
     void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E) && !etat && nbPieceNeedOpen<= Inventory.instance.coinsCount) //ouvre coffre
+        if (isInRange && Input.GetKeyDown(KeyCode.E) && !etat) //ouvre coffre
         {
-            OpenChest();
-            piecesNeeds.text = "";
-            piecesNeeds.enabled = false;
-        }
-        else if(nbPieceNeedOpen <= Inventory.instance.coinsCount)
-        {
-            piecesNeeds.text = "il vous manque " + piecesNeeds + " pieces";
-            piecesNeeds.enabled = true;
+            if(Inventory.instance.coinsCount < nbPieceNeedOpen)
+            {
+                piecesNeeds.text = "il vous manque " + nbPieceNeedOpen + " pieces";
+                piecesNeeds.enabled = true;
+                StartCoroutine(ErrorMessageDelay());
+            }
+            else
+            {
+                OpenChest();
+                nbPieces = Random.Range(5, 11);
+                piecesNeeds.text = "";
+                piecesNeeds.enabled = false;
+                Inventory.instance.RemoveCoins(nbPieceNeedOpen);
+                Inventory.instance.AddCoins(nbPieces);
+            }
         }
     }
     void OpenChest()
@@ -51,7 +58,7 @@ public class Coffre : MonoBehaviour
         }
         else
         {
-            nbPieces = Random.Range(5, 21);
+            nbPieces = Random.Range(5, 11);
             Inventory.instance.AddCoins(nbPieces);
             //son piece
         }
@@ -75,5 +82,10 @@ public class Coffre : MonoBehaviour
             interactUI.enabled = false;
         }
 
+    }
+    public IEnumerator ErrorMessageDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        piecesNeeds.enabled = false;
     }
 }

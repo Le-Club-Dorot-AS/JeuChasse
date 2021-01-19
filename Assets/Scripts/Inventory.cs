@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
 
     public Text TabIndice;
     public int nbIndice;
+    public int nbInstru;
 
     public static Inventory instance;
     private void Awake()
@@ -63,27 +64,36 @@ public class Inventory : MonoBehaviour
         coinsCount += count;
         coinsCountText.text = coinsCount.ToString();
     }
+    public void RemoveCoins(int count)
+    {
+        coinsCount -= count;
+        coinsCountText.text = coinsCount.ToString();
+    }
     public void AddInstru(int num)
     {
         if(num == 1)
         {
             haveInstru1 = true;
             imageInstru1.enabled = true;
+            nbInstru++;
         }
         else if (num == 2)
         {
             haveInstru2 = true;
             imageInstru2.enabled = true;
+            nbInstru++;
         }
         else if(num == 3)
         {
             haveInstru3 = true;
             imageInstru3.enabled = true;
+            nbInstru++;
         }
     }
     public void AddPapier(string indice)
     {
         TabIndice.text += indice+"\n";
         nbIndice++;
+        TabIndice.enabled = true;
     }
 }

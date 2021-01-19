@@ -8,11 +8,14 @@ public class NyanCat : MonoBehaviour
     public int damage;
     public int range;
     public GameObject player;
+    public GameObject bossChest;
     public float speed;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        bossChest = GameObject.FindGameObjectWithTag("BossChest");
+        bossChest.SetActive(false);
     }
     private void Update()
     {
@@ -21,6 +24,7 @@ public class NyanCat : MonoBehaviour
             //SoundManager.PlaySound("DeadSound");
             Inventory.instance.AddCoins(20);
             Destroy(gameObject);
+            bossChest.SetActive(true);
         }
         if (player.GetComponent<Player>().isBossFight)
         {
