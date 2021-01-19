@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinRecup : MonoBehaviour
+public class Trompette : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
