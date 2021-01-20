@@ -976,7 +976,7 @@ Transform:
   m_Children:
   - {fileID: 1989653438}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492688581
 GameObject:
@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 515893396}
   m_Layer: 5
   m_Name: InteractUI
-  m_TagString: Untagged
+  m_TagString: InteractUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1598,15 +1598,6 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: 51, y: 2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: 39, y: 3, z: 0}
     second:
       serializedVersion: 2
@@ -1636,8 +1627,8 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 55515f07f1cddbc40b988586fec0331a, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4057dcf773d84944681471ae803d4714, type: 2}
   - m_RefCount: 2
@@ -1645,9 +1636,8 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6c0eb491fbc517a4fa424f0da40b0c2f, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -4286169384492573949, guid: 50b9ef61a8829d04396188a8162b394c,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -4618995592081637678, guid: 50b9ef61a8829d04396188a8162b394c,
       type: 3}
@@ -1658,7 +1648,7 @@ Tilemap:
     m_Data: {fileID: -8625958514855940660, guid: 50b9ef61a8829d04396188a8162b394c,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data:
       e00: 1
       e01: 0
@@ -1677,7 +1667,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -24429,6 +24419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500961040336629986, guid: 79e41ec7694030c40a596e753bf27f41,
         type: 3}
+      propertyPath: etat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500961040336629986, guid: 79e41ec7694030c40a596e753bf27f41,
+        type: 3}
       propertyPath: contenu
       value: 4
       objectReference: {fileID: 0}
@@ -24455,17 +24450,17 @@ PrefabInstance:
     - target: {fileID: 3500961040336629989, guid: 79e41ec7694030c40a596e753bf27f41,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7632027
+      value: 2.95
       objectReference: {fileID: 0}
     - target: {fileID: 3500961040336629989, guid: 79e41ec7694030c40a596e753bf27f41,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3699279
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 3500961040336629989, guid: 79e41ec7694030c40a596e753bf27f41,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6025429
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 3500961040336629989, guid: 79e41ec7694030c40a596e753bf27f41,
         type: 3}
@@ -24535,9 +24530,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 1296741975}
-  - {fileID: 918975975}
-  - {fileID: 228512334}
-  - {fileID: 102966298}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1296741977
 Transform:
   m_ObjectHideFlags: 0
@@ -24550,7 +24545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1299066511
 GameObject:
@@ -26400,7 +26395,7 @@ PrefabInstance:
     - target: {fileID: 8822118814716972455, guid: 955f4dd4e2623f24e85e2d9fe9d2064f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6025429
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8822118814716972455, guid: 955f4dd4e2623f24e85e2d9fe9d2064f,
         type: 3}

@@ -33652,6 +33652,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 570155816}
   health: 3
+  audioSaute: {fileID: 0}
 --- !u!114 &570155814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33948,6 +33949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af5f294b264e8349ac4de8301e6361b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMortBernard: {fileID: 0}
 --- !u!114 &612911727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34021,7 +34023,7 @@ GameObject:
   - component: {fileID: 629936049}
   m_Layer: 5
   m_Name: InteractUI
-  m_TagString: Untagged
+  m_TagString: InteractUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

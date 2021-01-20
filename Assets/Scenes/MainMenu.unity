@@ -235,7 +235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToLoad: Level
-  settingswindow: {fileID: 0}
 --- !u!1 &768805997
 GameObject:
   m_ObjectHideFlags: 0
