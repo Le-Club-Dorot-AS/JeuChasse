@@ -32,9 +32,16 @@ public class Player : MonoBehaviour
     private float verticalMovement;
     public int health;
 
+    public AudioClip audioSaute=null;
+    private AudioSource perso_AudioSource;
+
+    
+
     private void Start()
     {
         gameObject.SetActive(true);
+        perso_AudioSource = GetComponent<AudioSource>();
+        
     }
     // Update is called once per frame
     void Update()
@@ -45,6 +52,7 @@ public class Player : MonoBehaviour
             gameOver.SetActive(true);
             Time.timeScale = 0;
             Destroy(gameObject);
+            
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
@@ -53,6 +61,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded) {
             isJumping = true;
+            perso_AudioSource.PlayOneShot(audioSaute);
         }
 
         Flip(rb.velocity.x);
