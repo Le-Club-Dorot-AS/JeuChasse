@@ -12,8 +12,7 @@ public class OpeningDoor : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            go.active = !go.active;
-          
+            go.active = !go.active;          
         }
     }
 }
