@@ -34840,7 +34840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab8f2dd4b75b2e479268a4708673111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 1194246961}
 --- !u!114 &1534121926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34860,8 +34860,9 @@ MonoBehaviour:
   isJumping: 0
   isClimbing: 0
   isBossFight: 0
-  gameOver: {fileID: 0}
-  projectilePrefab: {fileID: 0}
+  gameOver: {fileID: 13101353}
+  projectilePrefab: {fileID: 8502976973651176216, guid: 3c9cad85431b15f418e4476bd53e906f,
+    type: 3}
   shotPoint: {fileID: 0}
   startBtwShots: 0
   groundCheck: {fileID: 1523750929}
