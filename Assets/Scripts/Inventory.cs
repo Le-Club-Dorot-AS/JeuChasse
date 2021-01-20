@@ -32,6 +32,7 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+        DontDestroyOnLoad(instance);
     }
     public void Update()
     {

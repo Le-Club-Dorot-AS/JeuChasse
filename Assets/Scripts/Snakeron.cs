@@ -16,6 +16,7 @@ public class Snakeron : MonoBehaviour
     public GameObject projectile;
     public GameObject bossChest;
     public Transform firePoint;
+    public bool isStone;
 
     private Transform target; //définit la cible où il va se déplacer
     private int destPoint = 0; // 0 réfèrera à sa position initial.
@@ -23,6 +24,7 @@ public class Snakeron : MonoBehaviour
     void Start() //définira le départ
     {
         target = waypoints[0]; //L'ennemie ne bougera pas
+        isStone = false;
     }
 
     void Update() //définira les déplacements
@@ -42,16 +44,19 @@ public class Snakeron : MonoBehaviour
         }
         else
         {
-            Vector3 dir = target.position - transform.position; //le vecteur est la trajectoire entre un point A et un point B
-            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-
-            if (Vector3.Distance(transform.position, target.position) < 0.3f) // dés que l'ennemie s'approche de la destination, nous refixons une nouveau point de destination pour qu'il ne s'arrête pas.
+            if (!isStone)
             {
-                destPoint = (destPoint + 1) % waypoints.Length; //permettra de faire patrouiller lenemie.
-                target = waypoints[destPoint];
-                graphs.flipX = !graphs.flipX;
-                random = Random.Range(0, 100);
-                isShooting = true;
+                Vector3 dir = target.position - transform.position; //le vecteur est la trajectoire entre un point A et un point B
+                transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+
+                if (Vector3.Distance(transform.position, target.position) < 0.3f) // dés que l'ennemie s'approche de la destination, nous refixons une nouveau point de destination pour qu'il ne s'arrête pas.
+                {
+                    destPoint = (destPoint + 1) % waypoints.Length; //permettra de faire patrouiller lenemie.
+                    target = waypoints[destPoint];
+                    graphs.flipX = !graphs.flipX;
+                    random = Random.Range(0, 100);
+                    isShooting = true;
+                }
             }
         }    
     }
@@ -68,7 +73,8 @@ public class Snakeron : MonoBehaviour
         if (!isShooting)
         {
             ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Instantiate(projectile, firePoint.position, transform.rotation);
+            Rigidbody rb = Instantiate(projectile, firePoint.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             ///End of attack code
@@ -76,6 +82,17 @@ public class Snakeron : MonoBehaviour
             isShooting = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+    }
+    public void stoneEnnemy()
+    {
+        //Debug.Log("stone");
+        isStone = true;
+        StartCoroutine(StoneDelay());
+    }
+    public IEnumerator StoneDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        isStone = false;
     }
     private void ResetAttack()
     {

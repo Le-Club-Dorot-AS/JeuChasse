@@ -31,7 +31,12 @@ public class Projectile : MonoBehaviour
         }else if (weak != null)
         {
             //Debug.Log(ennemy);
-            ennemy.stoneEnnemy();
+            if(ennemy != null)
+                ennemy.stoneEnnemy();
+            else if (testNyan != null)
+                testNyan.stoneEnnemy();
+            else if (testSnakeron != null)
+                testSnakeron.stoneEnnemy();
         }
         DestroyProjectile();
     }

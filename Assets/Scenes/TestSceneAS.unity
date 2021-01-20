@@ -5061,7 +5061,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -4741422362563310319, guid: 384c8cea22998ad42bcb7bb11d96571a,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5296,7 +5297,7 @@ GameObject:
   - component: {fileID: 851725078}
   m_Layer: 0
   m_Name: Graphics
-  m_TagString: Ennemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5325,15 +5326,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 851725076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8bb6ab3fabd5d04f8f0948885080199, type: 3}
+  m_Script: {fileID: 11500000, guid: 854e3089e241f7d48a172b8faf58f4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxhealth: 100
+  currentHealth: 0
+  damage: 1
+  range: 20
+  player: {fileID: 1965271537}
+  bossChest: {fileID: 159058445}
   speed: 5
-  waypoints:
-  - {fileID: 2081645705}
-  - {fileID: 308418270}
-  graphs: {fileID: 851725080}
-  damageDeal: 1
   isStone: 0
 --- !u!61 &851725079
 BoxCollider2D:
