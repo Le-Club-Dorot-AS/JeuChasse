@@ -46,7 +46,7 @@ public class CoffreBoss : MonoBehaviour
             }
         }
 
-        if(Inventory.instance.haveInstru1 == true)
+        if(Inventory.instance.haveInstru1 == true || Inventory.instance.haveInstru2 == true || Inventory.instance.haveInstru3 == true)
         {
             StartCoroutine(LoadScene());
         }
