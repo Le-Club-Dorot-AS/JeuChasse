@@ -36,7 +36,6 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(instance);
     }
     public void Update()
     {
@@ -75,6 +74,12 @@ public class Inventory : MonoBehaviour
         {
             audioSource2.mute = true;
             audioSource3.mute = false;
+        }
+        else
+        {
+            audioSource2.mute = true;
+            audioSource3.mute = true;
+            audioSource1.mute = true;
         }
     }
     public void AddCoins(int count)

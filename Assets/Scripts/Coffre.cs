@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Coffre : MonoBehaviour
 {
@@ -42,7 +43,20 @@ public class Coffre : MonoBehaviour
                 Inventory.instance.AddCoins(nbPieces);
             }
         }
+
+        if (Inventory.instance.haveInstru1 == true && Inventory.instance.haveInstru2 == true && Inventory.instance.haveInstru3 == false)
+        {
+            StartCoroutine(LoadScene());
+        }
+        else if (Inventory.instance.haveInstru1 == true && Inventory.instance.haveInstru2 == true && Inventory.instance.haveInstru3 == true)
+        {
+            StartCoroutine(LoadScene3());
+
+        }
+
     }
+
+
     void OpenChest()
     {
         animator.SetTrigger("OpenChest");
@@ -87,5 +101,17 @@ public class Coffre : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         piecesNeeds.enabled = false;
+    }
+
+    public IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Level2");
+    }
+
+    public IEnumerator LoadScene3()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Level3");
     }
 }

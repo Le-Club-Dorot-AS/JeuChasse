@@ -46,10 +46,16 @@ public class CoffreBoss : MonoBehaviour
             }
         }
 
-        if(Inventory.instance.haveInstru1 == true || Inventory.instance.haveInstru2 == true || Inventory.instance.haveInstru3 == true)
+        if(Inventory.instance.haveInstru1 == true && Inventory.instance.haveInstru2 == true)
         {
             StartCoroutine(LoadScene());
         }
+        else if (Inventory.instance.haveInstru1 == true && Inventory.instance.haveInstru2 == true && Inventory.instance.haveInstru3 == true)
+        {
+            StartCoroutine(LoadScene3());
+
+        }
+        
     }
     void OpenChest()
     {
@@ -101,5 +107,11 @@ public class CoffreBoss : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(sceneName);
+    }
+
+    public IEnumerator LoadScene3()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Level3");
     }
 }
