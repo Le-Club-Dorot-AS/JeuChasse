@@ -7,6 +7,8 @@ public class ItemNotDestroyed : MonoBehaviour
 {
     public GameObject[] objects;
 
+    public static ItemNotDestroyed instance;
+
     void Awake()
     {
         foreach (var element in objects)
@@ -15,12 +17,6 @@ public class ItemNotDestroyed : MonoBehaviour
         }
     }
 
-    void RemoveFromDestroy()
-    {
-        foreach (var element in objects)
-        {
-                SceneManager.MoveGameObjectToScene(element,SceneManager.GetActiveScene());
-        }
-    }
+   
 
 }

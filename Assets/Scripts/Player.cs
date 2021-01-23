@@ -51,8 +51,7 @@ public class Player : MonoBehaviour
         {
             gameOver.SetActive(true);
             Time.timeScale = 0;
-            Destroy(gameObject);
-            
+            Destroy(gameObject);            
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
