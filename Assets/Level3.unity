@@ -33583,6 +33583,7 @@ GameObject:
   - component: {fileID: 570155813}
   - component: {fileID: 570155812}
   - component: {fileID: 570155811}
+  - component: {fileID: 570155818}
   m_Layer: 8
   m_Name: PlayerL3
   m_TagString: Player
@@ -33649,7 +33650,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   rb: {fileID: 570155815}
-  animator: {fileID: 0}
+  animator: {fileID: 570155818}
   spriteRenderer: {fileID: 570155816}
   health: 3
   audioSaute: {fileID: 0}
@@ -33762,6 +33763,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &570155818
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570155810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f4897c8aa4305f4d8aef2b03af08538, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &600311356
 PrefabInstance:
   m_ObjectHideFlags: 0

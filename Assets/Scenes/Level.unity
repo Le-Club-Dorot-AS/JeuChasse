@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 89205989}
   - component: {fileID: 89205988}
   - component: {fileID: 89205995}
+  - component: {fileID: 89205996}
   m_Layer: 8
   m_Name: 'Player '
   m_TagString: Player
@@ -457,7 +458,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   rb: {fileID: 89205992}
-  animator: {fileID: 0}
+  animator: {fileID: 89205996}
   spriteRenderer: {fileID: 89205993}
   health: 3
   audioSaute: {fileID: 0}
@@ -666,6 +667,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &89205996
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89205987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f4897c8aa4305f4d8aef2b03af08538, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &102966298
 GameObject:
   m_ObjectHideFlags: 0
