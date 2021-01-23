@@ -69,15 +69,15 @@ public class Player : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
-
-
-        float characterVelocity = Mathf.Abs(rb.velocity.x);
-        animator.SetFloat("Speed", characterVelocity);
         
     }
     void FixedUpdate()
     {
         MovePlayer(horizontalMovement, verticalMovement);
+
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
+
     }
     void MovePlayer(float _horizontalMovement, float _verticalMovement) 
     {
