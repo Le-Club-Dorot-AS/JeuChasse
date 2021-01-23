@@ -444,7 +444,7 @@ MonoBehaviour:
   moveSpeed: 1400
   climbSpeed: 2000
   jumpForce: 425
-  isGrounded: 0
+  isGrounded: 1
   isJumping: 0
   isClimbing: 0
   isBossFight: 0
