@@ -7,6 +7,10 @@ public class Inventory : MonoBehaviour
 {
     public int coinsCount;
     public Text coinsCountText;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
+    public AudioSource audioSource3;
+    public AudioSource audioSource4;
 
     public bool haveInstru1 = false;
     public Image imageInstru1;
@@ -58,6 +62,19 @@ public class Inventory : MonoBehaviour
             {
                 TabIndice.enabled = true;
             }
+        }
+        if (nbInstru == 1)
+        {
+            audioSource1.mute = false;
+        }else if(nbInstru == 2)
+        {
+            audioSource1.mute = true;
+            audioSource2.mute = false;
+        }
+        else if(nbInstru == 3)
+        {
+            audioSource2.mute = true;
+            audioSource3.mute = false;
         }
     }
     public void AddCoins(int count)

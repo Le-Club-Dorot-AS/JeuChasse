@@ -7,6 +7,8 @@ TagManager:
   - PlayerSpawn
   - Fondations
   - Ennemy
+  - Projectile
+  - InteractUI
   layers:
   - Default
   - TransparentFX
